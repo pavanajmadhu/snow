@@ -3,7 +3,7 @@ const World= Matter.World;
 const Bodies = Matter.Bodies;
 
 var engine, world;
-var imagepos=[]
+var snow=[]
 
 function preload(){
   backgroundImg=loadImage("snow3.jpg")
@@ -26,15 +26,18 @@ function draw() {
 
   Engine.update(engine);
   
-
+if(frameCount%40===0){
   
   
-     snow1=new Snow(600,20)
+     snow.push(new Snow(random(0,600),20))
+    }
 
+for(var t=0;t<snow.length;t++){
+  snow[t].display();
+}
 
    
 
-snow1.display();
 
 
   

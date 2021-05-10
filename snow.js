@@ -12,14 +12,11 @@ class Snow{
        this.imagepos=[]
       }
       display(){
-        if(frameCount>60){
-        var position=[(random(20,790)),30]
-       this.imagepos.push(position)
+       
         imageMode(CENTER);
-        for(var i=0;i<100;i++){
-          image(this.image,this.imagepos[i][0],this.imagepos[i][1], 30,30)
-        }
+        var pos=this.body.position;
+          image(this.image,pos.x,pos.y, 30,30)
+        
         }
        
       }
-}
